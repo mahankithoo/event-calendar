@@ -1,0 +1,179 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  justify-content: center;
+  min-height: 100vh;
+  background: #9B59B6;
+}
+
+.days li.event-day {
+  background-color: #3498db; /* Blue color for days with events */
+  color: #fff; /* Text color for better visibility */
+}
+
+.wrapper {
+  width: 400px; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the calendar horizontally */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  margin-right: 20px; /* Add margin on the right to create space */
+}
+
+.wrapper-details {
+  width: 400px; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the details container horizontally */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  margin-left: 20px;
+}
+
+.wrapper header {
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+}
+
+header .icons {
+  display: flex;
+}
+
+header .icons span {
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #878787;
+  text-align: center;
+  line-height: 38px;
+  font-size: 1.9rem;
+  user-select: none;
+  border-radius: 50%;
+}
+
+.icons span:last-child {
+  margin-right: -10px;
+}
+
+header .icons span:hover {
+  background: #f2f2f2;
+}
+
+header .current-date {
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+.calendar {
+  padding: 20px;
+}
+
+.calendar ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+
+.calendar .days {
+  margin-bottom: 20px;
+}
+
+.calendar li {
+  color: #333;
+  width: calc(100% / 7);
+  font-size: 1.07rem;
+}
+
+.calendar .weeks li {
+  font-weight: 500;
+  cursor: default;
+}
+
+.calendar .days li {
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+}
+
+.days li.inactive {
+  color: #aaa;
+}
+
+.days li.active {
+  color: #fff;
+}
+
+.days li::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.days li.active::before {
+  background: #9B59B6;
+}
+
+.days li:not(.active):hover::before {
+  background: #f2f2f2;
+}
+/* Add this to your CSS */
+
+.wrapper-details .event-details {
+  padding: 20px;
+}
+
+.event-details-content {
+  text-align: center;
+}
+
+.event-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.event-description {
+  margin-bottom: 10px;
+}
+
+.event-time {
+  font-style: italic;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.teacher-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teacher-profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.teacher-name {
+  font-weight: 500;
+}
